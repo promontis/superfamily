@@ -13,7 +13,7 @@ Superfamily combineert:
 
 | Component | Technologie |
 |-----------|-------------|
-| Game Engine | Unreal Engine 5.5+ |
+| Game Engine | Unreal Engine 5.5 |
 | AI Development Tool | Flopperam (level building, blueprints) |
 | Mobile App | React Native |
 | Backend | Node.js + PostgreSQL |
@@ -35,6 +35,13 @@ Superfamily combineert:
 ## Documentatie
 
 - PRD: `.claude/PRD.md`
+- Shadow.tech Setup: `docs/shadow-setup.md`
+
+## Development Environment
+
+### Shadow.tech (Cloud Gaming PC)
+
+Voor development op Shadow.tech, zie `docs/shadow-setup.md`.
 
 ## Commands
 
