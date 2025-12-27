@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "RNUE Bridge",
+	"Description": "React Native communication bridge for Superfamily - enables messaging between UE5 and React Native wrapper",
+	"Category": "Networking",
+	"CreatedBy": "Superfamily B.V.",
+	"CreatedByURL": "https://superfamily.nl",
+	"DocsURL": "https://rnue.dev",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "RNUEBridge",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}

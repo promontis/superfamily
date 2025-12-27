@@ -1,0 +1,82 @@
+{
+  "$schema": "https://flopperam.com/schema/config.json",
+  "version": "1.0",
+  "project": {
+    "name": "Superfamily",
+    "type": "2.5D Platformer",
+    "engineVersion": "5.4",
+    "targetPlatforms": ["iOS", "Android"]
+  },
+  "settings": {
+    "apiEndpoint": "https://api.flopperam.com/v1",
+    "apiKey": "${FLOPPERAM_API_KEY}",
+    "modelVersion": "latest",
+    "verboseLogging": true
+  },
+  "generation": {
+    "defaultPromptTemplate": "level-creation",
+    "blueprintStyle": "superfamily",
+    "assetNamingConvention": {
+      "staticMesh": "SM_{Name}",
+      "material": "M_{Name}",
+      "blueprint": "BP_{Name}",
+      "niagara": "VFX_{Name}"
+    },
+    "defaultWorldSettings": {
+      "constrainToPlane": true,
+      "planeNormal": [0, 1, 0],
+      "unitScale": 100,
+      "gravity": -980
+    }
+  },
+  "templates": {
+    "levelTemplates": [
+      {
+        "name": "Standard Level",
+        "path": "Content/Superfamily/Levels/_Templates/L_Template_Standard",
+        "description": "Basic 2.5D platformer level with question triggers"
+      },
+      {
+        "name": "Boss Level",
+        "path": "Content/Superfamily/Levels/_Templates/L_Template_Boss",
+        "description": "Boss encounter level with multiple questions"
+      }
+    ],
+    "actorTemplates": [
+      {
+        "name": "Question Trigger",
+        "class": "BP_QuestionTrigger",
+        "category": "Education"
+      },
+      {
+        "name": "Coin Collectible",
+        "class": "BP_Collectible_Coin",
+        "category": "Gameplay"
+      },
+      {
+        "name": "Moving Platform",
+        "class": "BP_Platform_Moving",
+        "category": "Gameplay"
+      }
+    ]
+  },
+  "prompts": {
+    "directory": ".flopperam/prompts",
+    "customPrompts": [
+      "level-creation",
+      "question-trigger",
+      "collectibles",
+      "platform-layout"
+    ]
+  },
+  "contentFilters": {
+    "childFriendly": true,
+    "maxComplexity": "medium",
+    "educationalFocus": true
+  },
+  "notes": {
+    "status": "Placeholder configuration - Flopperam access pending",
+    "contact": "https://flopperam.com/beta",
+    "documentation": "https://flopperam.com/docs"
+  }
+}

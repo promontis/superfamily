@@ -1,0 +1,20 @@
+# Superfamily Content Directory
+# Deze folder bevat alle game assets georganiseerd per categorie
+#
+# Naming Conventions:
+# - Static Mesh: SM_*
+# - Skeletal Mesh: SK_*
+# - Texture: T_* (met suffix _D voor diffuse, _N voor normal)
+# - Material: M_*
+# - Material Instance: MI_*
+# - Blueprint: BP_*
+# - Widget Blueprint: WBP_*
+# - Animation Blueprint: ABP_*
+# - Animation Sequence: AS_*
+# - Animation Montage: AM_*
+# - DataTable: DT_*
+# - DataAsset: DA_*
+# - Sound: SFX_* of MUS_*
+# - Particle/Niagara: VFX_*
+# - Input Action: IA_*
+# - Input Mapping Context: IMC_*

@@ -1,0 +1,68 @@
+# Flopperam Level Creation Prompt Template
+# Superfamily 2.5D Platformer
+
+## Context
+This prompt is used to generate level sections for Superfamily, a 2.5D educational platformer
+for children aged 4-8. The game uses Unreal Engine 5.4 with movement constrained to the XZ plane.
+
+## Base Instructions
+- All platforms should be placed on Y=0 (constrained to 2.5D plane)
+- Use child-friendly proportions (larger platforms, gentler gaps)
+- Maintain consistent visual style with World01_Forest theme
+- Include educational question triggers at appropriate intervals
+
+## Variables
+- {LEVEL_LENGTH}: Total X-axis length in units (default: 5000)
+- {DIFFICULTY}: Groep1|Groep2|Groep3|Groep4
+- {QUESTION_COUNT}: Number of question triggers (default: 3)
+- {COIN_COUNT}: Number of coins to place (default: 15)
+- {INCLUDE_MOVING_PLATFORMS}: true|false
+- {WORLD_THEME}: Forest|City|Space
+
+## Example Prompts
+
+### Basic Level Section
+```
+Create a platformer section with:
+- Length: 3000 units
+- 8 static platforms with varying heights (Z: 0-400)
+- Horizontal gaps: 200-400 units
+- 2 question triggers at X=1000 and X=2000
+- Coins along the path in arc patterns
+- Forest theme decorations
+```
+
+### With Moving Platforms
+```
+Generate a level section for Groep 2 (age 5-6):
+- Total length: 4000 units
+- Mix of 6 static and 3 moving platforms
+- Moving platforms: horizontal oscillation, 3 second period
+- Question trigger blocking progress at X=2500
+- Checkpoint at X=4000
+- Include 20 coins in challenging positions
+```
+
+### Boss Room
+```
+Create a boss encounter area:
+- Circular arena style (1500 unit diameter)
+- Central platform at Z=200
+- 5 smaller platforms around the edges
+- No gaps to fall through (child-friendly)
+- Question trigger in center for boss questions
+- Victory particle spawn point at center
+```
+
+## Output Format
+Flopperam should output:
+1. Actor placements with positions
+2. Blueprint references for each actor
+3. Material assignments from World01_Forest palette
+4. Collision setup for platforms
+5. Trigger volumes for questions
+
+## Notes
+- Always prioritize player safety (no instant-death falls for young children)
+- Keep visual complexity low for mobile performance
+- Ensure camera sight lines work with side-scrolling view
