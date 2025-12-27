@@ -1,0 +1,70 @@
+# Flopperam Question Trigger Prompt Template
+# Superfamily Educational System
+
+## Context
+Question triggers are interactive elements that pause gameplay and present
+educational questions to the player. They are core to the Superfamily experience.
+
+## Trigger Types
+
+### Standard Question Trigger
+Non-blocking, awards XP for correct answers
+```
+Create a question trigger at position {POSITION}:
+- Subject: {SUBJECT} (Taal|Rekenen|Natuur|Engels)
+- Difficulty: {DIFFICULTY}
+- Blocking: false
+- Visual: Glowing question mark indicator
+- Audio: Question chime on activation
+- Reward: 10 XP correct, 2 XP incorrect
+```
+
+### Door Question Trigger
+Blocks progress until answered correctly
+```
+Create a question door at position {POSITION}:
+- Subject: Rekenen
+- Difficulty: Groep2
+- Blocking: true
+- Max attempts: 3
+- Visual: Closed gate/door mesh
+- On correct: Play door open animation, reveal path
+- On incorrect: Shake animation, try again prompt
+```
+
+### Boss Question Trigger
+Multiple questions in sequence
+```
+Create a boss question trigger at position {POSITION}:
+- Question count: 5
+- Subjects: Mixed (Taal, Rekenen)
+- Difficulty: {BOSS_DIFFICULTY}
+- Progress bar showing questions remaining
+- Celebration particles on completion
+```
+
+## Components to Generate
+
+1. **Collision Box**
+   - Size appropriate for child character (150x150x200)
+   - Trigger on overlap with player
+
+2. **Visual Indicator**
+   - Floating question mark mesh
+   - Particle effect (subtle glow)
+   - Material: MI_QuestionGlow
+
+3. **Audio Component**
+   - Activation sound: SFX_QuestionAppear
+   - Correct answer: SFX_Correct_Answer
+   - Wrong answer: SFX_Wrong_Answer
+
+4. **Blueprint Events**
+   - OnTriggerActivated
+   - OnQuestionAnswered(bool bCorrect)
+   - OnTriggerCompleted
+
+## Integration Notes
+- Connect to QuestionManager subsystem for question data
+- Questions loaded from CMS (Strapi) via EducationSystem plugin
+- Support voice-over playback for non-reading children
